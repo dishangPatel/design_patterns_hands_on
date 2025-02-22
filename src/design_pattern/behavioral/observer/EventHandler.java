@@ -31,8 +31,10 @@ public class EventHandler implements Publisher {
         System.out.println("Notifying subscriber for event " + eventType + " with message " + message);
         for (Listner listner : subscribers.get(eventType)) {
             listner.update(eventType, message);
+            System.out.println("----------------------");
         }
         System.out.println("Completed notifying subscriber for event " + eventType + " with message " + message);
+        System.out.println("=======================================");
     }
 
 
